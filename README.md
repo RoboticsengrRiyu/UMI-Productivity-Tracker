@@ -1,693 +1,502 @@
-# 🤖 UMI Data Collection Productivity & Quality Tracker
+# UMI Data Collection Platform
+### Real-Time Operator Productivity & Quality Web Application
 
-### Enterprise Analytics Platform for Robotics Data Collection Operations
+https://img.shields.io/badge/React-18-blue.svg\]()
+https://img.shields.io/badge/FastAPI-Latest-green.svg\]()
+https://img.shields.io/badge/Firebase-Cloud-orange.svg\]()
+https://img.shields.io/badge/PostgreSQL-Database-blue.svg\]()
 
-> Transform robotics data collection into a measurable, scalable, and quality-driven operation through real-time productivity tracking, quality analytics, and operational intelligence.
-
-The **UMI Data Collection Productivity & Quality Tracker** is a centralized platform designed to help robotics data collection teams monitor productivity, maintain dataset quality, and drive continuous improvement across AI and autonomy programs.
-
-Built for **Data Collectors**, **Quality Analysts**, **Robotics Engineers**, **Operations Managers**, and **Project Leads**, the platform provides visibility into workforce performance, collection efficiency, quality metrics, and program health.
-
----
-
-## 📖 Table of Contents
-
-- #-overview
-- #-objectives
-- #-features
-- #-architecture
-- #-technology-stack
-- #-project-structure
-- #-quick-start
-- #-productivity-tracking
-- #-quality-tracking
-- #-dashboard-modules
-- #-reporting
-- #-troubleshooting
-- #-best-practices
-- #-roadmap
-- #-contributing
-- #-license
+A cloud-based web application designed for NVIDIA UMI Data Collection operations to monitor operator productivity, data quality, attendance, task completion, and dataset acceptance in real time.
 
 ---
 
-# 🌟 Overview
+# Features
 
-Robotics AI systems depend on large amounts of high-quality training data. A single quality issue can impact model performance, while productivity bottlenecks can delay project milestones.
+## Operator Dashboard
 
-The UMI Data Collection Productivity & Quality Tracker provides a single source of truth for monitoring:
+Monitor individual operator performance.
 
-- Data collection productivity
-- Dataset quality
-- Workforce performance
-- Project throughput
-- Audit compliance
-- Quality trends
-- KPI achievement
-- Operational efficiency
+### Metrics
 
-The platform enables leadership teams to make data-driven decisions while helping collectors and analysts maintain excellence in day-to-day operations.
-
----
-
-# 🎯 Objectives
-
-The primary goals of this platform are to:
-
-✅ Improve data collection productivity
-
-✅ Increase dataset quality
-
-✅ Reduce rework and defects
-
-✅ Identify operational bottlenecks
-
-✅ Support resource planning
-
-✅ Improve KPI visibility
-
-✅ Enable continuous improvement
-
-✅ Accelerate robotics AI development
-
----
-
-# ✨ Features
-
-## 📊 Productivity Analytics
-
-Track workforce performance with real-time operational metrics:
-
-- Tasks Completed
-- Collection Sessions Completed
-- Collection Hours
-- Daily Throughput
-- Output per Hour
-- Weekly Productivity Trends
-- Monthly Performance Tracking
-- Workforce Utilization
-
----
-
-## ✅ Quality Monitoring
-
-Ensure collected datasets meet quality standards:
-
+- Datasets Collected
+- Demonstrations Completed
+- Collection Time
+- Active Time
+- Idle Time
+- Upload Success Rate
+- Quality Score
 - Acceptance Rate
-- Audit Pass Rate
-- Defect Tracking
-- Rework Monitoring
-- Metadata Accuracy
-- Validation Results
-- Compliance Monitoring
-- Quality Trend Analysis
+- Productivity Score
 
 ---
 
-## 📈 Real-Time Dashboard
+## Team Lead Dashboard
 
-Monitor operations from a single interface:
+Monitor the entire data collection team.
 
-- Active Collectors
-- Tasks In Progress
-- Daily Production Status
-- Quality Health
-- KPI Achievement
-- Team Performance
-- Operational Alerts
+### Team KPIs
 
----
-
-## 🏆 KPI Performance Tracking
-
-Track performance against project goals:
-
-| KPI | Description |
-|------|-------------|
-| Productivity % | Actual output versus target output |
-| Quality % | Approved submissions versus total submissions |
-| Throughput | Daily collection volume |
-| Utilization % | Productive hours versus available hours |
-| Accuracy % | Error-free submission rate |
-| Compliance % | Adherence to collection standards |
+- Total Datasets Collected
+- Active Operators
+- Average Productivity
+- Average Quality
+- Team Acceptance Rate
+- Operator Ranking
+- Shift Coverage
+- Team Utilization
 
 ---
 
-## 🔔 Automated Alerts
+## Quality Dashboard
 
-Receive notifications for:
+Track quality-related issues.
 
-- Missed productivity targets
-- Quality degradation
-- Collection delays
-- Rising defect trends
-- Audit failures
-- Performance anomalies
+### Quality Metrics
 
----
-
-## 📋 Reporting & Analytics
-
-Generate leadership-ready reports including:
-
-- Daily Production Reports
-- Weekly Performance Reviews
-- Monthly KPI Summaries
-- Team Comparison Reports
-- Quality Audit Reports
-- Executive Dashboards
+- Dataset Rejections
+- Missing Metadata
+- Annotation Errors
+- Camera Calibration Errors
+- Rework Requests
+- Defect Trends
 
 ---
 
-# 🏗️ Architecture
+## Real-Time Monitoring
+
+### Live Updates
 
 ```text
-┌─────────────────────────────┐
-│ Data Collectors             │
-│ Session Submissions         │
-└──────────────┬──────────────┘
-               │
-               ▼
-┌─────────────────────────────┐
-│ Collection Database         │
-│ Productivity Records        │
-└──────────────┬──────────────┘
-               │
-               ▼
-┌─────────────────────────────┐
-│ Quality Validation Engine   │
-│ Audit & Review Processing   │
-└──────────────┬──────────────┘
-               │
-               ▼
-┌─────────────────────────────┐
-│ KPI & Analytics Engine      │
-│ Metrics Calculation         │
-└──────────────┬──────────────┘
-               │
-               ▼
-┌─────────────────────────────┐
-│ Dashboard & Reporting       │
-│ Operational Intelligence    │
-└─────────────────────────────┘
+✅ Operator Status
+✅ Dataset Collection Activity
+✅ Upload Progress
+✅ Dataset Validation
+✅ Quality Inspection
+✅ Team Dashboard Refresh
 ```
 
 ---
 
-# 🛠 Technology Stack
+# Technology Stack
 
-| Component | Technology |
-|------------|------------|
-| Frontend | React / Angular |
-| Backend | FastAPI |
-| Database | PostgreSQL |
-| Analytics | Python |
-| Reporting | Power BI |
-| Dashboard Visualization | Grafana |
-| Data Processing | Pandas |
-| Authentication | Microsoft Entra ID |
-| Hosting | AWS / Azure |
+## Frontend
+
+```text
+React.js
+Tailwind CSS
+Material UI
+Recharts
+Axios
+React Router
+```
 
 ---
 
-# 📂 Project Structure
+## Backend
 
 ```text
-umi-productivity-tracker/
+FastAPI
+Python
+JWT Authentication
+WebSockets
+Background Services
+```
+
+---
+
+## Database
+
+```text
+PostgreSQL
+Firebase Firestore
+Redis Cache
+```
+
+---
+
+## Cloud Hosting
+
+### Google Cloud
+
+```text
+Cloud Run
+Cloud SQL
+Firebase Hosting
+Firestore
+Cloud Storage
+```
+
+Works directly in:
+
+```text
+✅ Google Chrome
+✅ Microsoft Edge
+✅ Firefox
+✅ Safari
+✅ Android
+✅ iPhone
+✅ Tablet
+```
+
+---
+
+# Operator Workflow
+
+```text
+Login
+   │
+   ▼
+Start Collection Session
+   │
+   ▼
+Record UMI Demonstration
+   │
+   ▼
+Upload Dataset
+   │
+   ▼
+Automatic Quality Validation
+   │
+   ▼
+Project Review
+   │
+   ▼
+Dataset Accepted
+```
+
+---
+
+# Productivity Formula
+
+## Productivity Score
+
+```text
+Productivity Score =
+(Completed Tasks ÷ Assigned Tasks) × 100
+```
+
+### Example
+
+```text
+Completed Tasks = 95
+Assigned Tasks = 100
+
+Productivity = 95%
+```
+
+---
+
+# Quality Formula
+
+## Quality Score
+
+```text
+Quality Score =
+100 - (
+Capture Errors +
+Metadata Errors +
+Annotation Errors
+)
+```
+
+### Example
+
+```text
+Quality Score = 98%
+```
+
+---
+
+# Operator Performance Formula
+
+```text
+Overall Score =
+40% Productivity +
+40% Quality +
+20% Attendance
+```
+
+---
+
+# Dashboard Pages
+
+## Home Dashboard
+
+```text
+Datasets Today
+Productivity Score
+Quality Score
+Acceptance Rate
+```
+
+---
+
+## Operators
+
+```text
+Operator List
+Current Shift
+Status
+Performance
+```
+
+---
+
+## Team Analytics
+
+```text
+Weekly Productivity
+Monthly Productivity
+Trend Analysis
+Leaderboard
+```
+
+---
+
+## Quality Analytics
+
+```text
+Defect Analysis
+Rework Trends
+Acceptance Trends
+Validation Reports
+```
+
+---
+
+# Database Schema
+
+## Operators
+
+```sql
+CREATE TABLE operators (
+    id SERIAL PRIMARY KEY,
+    employee_id VARCHAR(50),
+    name VARCHAR(100),
+    shift VARCHAR(50),
+    status VARCHAR(20),
+    productivity_score DECIMAL(5,2),
+    quality_score DECIMAL(5,2),
+    attendance_score DECIMAL(5,2)
+);
+```
+
+---
+
+## Datasets
+
+```sql
+CREATE TABLE datasets (
+    id SERIAL PRIMARY KEY,
+    operator_id INTEGER,
+    dataset_name VARCHAR(255),
+    collected_at TIMESTAMP,
+    accepted BOOLEAN,
+    quality_score DECIMAL(5,2),
+    upload_status VARCHAR(20)
+);
+```
+
+---
+
+# API Endpoints
+
+## Operators
+
+```http
+GET /api/operators
+
+GET /api/operators/{id}
+
+POST /api/operators
+```
+
+---
+
+## Productivity
+
+```http
+GET /api/productivity
+
+POST /api/productivity/update
+```
+
+---
+
+## Quality
+
+```http
+GET /api/quality
+
+POST /api/quality/report
+```
+
+---
+
+## Dashboard
+
+```http
+GET /api/dashboard
+
+GET /api/dashboard/live
+```
+
+---
+
+# User Roles
+
+## Operator
+
+Permissions:
+
+```text
+View Personal Dashboard
+Start Collection Session
+Upload Dataset
+View Quality Results
+```
+
+---
+
+## Quality Analyst
+
+Permissions:
+
+```text
+Review Datasets
+Approve Datasets
+Reject Datasets
+Create Quality Reports
+```
+
+---
+
+## Project Lead
+
+Permissions:
+
+```text
+View Team Dashboard
+Monitor Productivity
+Track Quality
+Generate Reports
+Manage Operators
+```
+
+---
+
+# KPI Targets
+
+| KPI | Target |
+|-------|----------|
+| Productivity Score | > 90% |
+| Quality Score | > 95% |
+| Acceptance Rate | > 95% |
+| Upload Success | 100% |
+| Attendance | > 98% |
+| Rework Rate | < 2% |
+
+---
+
+# Future Enhancements
+
+### NVIDIA UMI Integration
+
+```text
+✅ Dataset Validation Engine
+✅ OAK-D Camera Monitoring
+✅ Robot Station Utilization
+✅ Real-Time Dataset Tracking
+✅ Multi-Camera Synchronization
+✅ AI Quality Inspection
+✅ Defect Prediction
+✅ Analytics Dashboard
+✅ Team Leaderboard
+✅ Power BI Export
+✅ Excel Export
+✅ Weekly Productivity Reports
+✅ Monthly Quality Reports
+✅ Shift Scheduling
+✅ Attendance Tracking
+```
+
+---
+
+# Deployment
+
+## Frontend
+
+```bash
+npm install
+npm run build
+```
+
+---
+
+## Backend
+
+```bash
+pip install -r requirements.txt
+
+uvicorn main:app --reload
+```
+
+---
+
+## Firebase Deployment
+
+```bash
+npm install -g firebase-tools
+
+firebase login
+
+firebase init
+
+firebase deploy
+```
+
+---
+
+# Repository Structure
+
+```text
+umi-data-collection-platform/
 │
 ├── frontend/
-│   ├── Dashboard UI
-│   ├── Productivity Views
-│   └── Reporting Pages
+│   ├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── services/
+│   └── dashboard/
 │
 ├── backend/
-│   ├── REST APIs
-│   ├── KPI Services
-│   └── Authentication
+│   ├── api/
+│   ├── quality/
+│   ├── productivity/
+│   ├── analytics/
+│   └── reports/
 │
 ├── database/
-│   ├── Productivity Records
-│   ├── Quality Records
-│   └── Audit Results
-│
-├── analytics/
-│   ├── KPI Engine
-│   ├── Trend Analysis
-│   ├── Forecast Models
-│   └── Quality Analytics
-│
-├── automation/
-│   ├── Scheduled Jobs
-│   ├── Notifications
-│   └── Report Generation
-│
-├── reports/
-│   ├── Daily Reports
-│   ├── Weekly Reports
-│   └── Monthly Reports
 │
 ├── docs/
+│
 ├── tests/
 │
-├── requirements.txt
+├── docker/
+│
 └── README.md
 ```
 
 ---
 
-# 🚀 Quick Start
-
-## Clone Repository
-
-```bash
-git clone https://github.com/company/umi-productivity-tracker.git
-
-cd umi-productivity-tracker
-```
-
----
-
-## Create Virtual Environment
-
-```bash
-python -m venv venv
-```
-
-### Linux/macOS
-
-```bash
-source venv/bin/activate
-```
-
-### Windows
-
-```powershell
-venv\Scripts\activate
-```
-
----
-
-## Install Dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
----
-
-## Configure Environment
-
-Create a `.env` file:
-
-```env
-DB_HOST=localhost
-DB_PORT=5432
-
-DB_NAME=umi_tracker
-DB_USER=admin
-DB_PASSWORD=password
-
-SECRET_KEY=your-secret-key
-```
-
----
-
-## Start Backend
-
-```bash
-uvicorn app.main:app --reload
-```
-
----
-
-## Start Frontend
-
-```bash
-npm install
-
-npm run dev
-```
-
----
-
-## Open Dashboard
+# Repository Name
 
 ```text
-http://localhost:3000
+umi-data-collection-platform
 ```
 
----
-
-# 📊 Productivity Tracking
-
-## Productivity Formula
+### Description
 
 ```text
-Productivity (%) =
-(Actual Output ÷ Target Output) × 100
+Enterprise-grade real-time web application for NVIDIA UMI Data Collection operations, providing operator productivity tracking, quality monitoring, dataset validation, analytics, reporting, and project management dashboards accessible through Google Chrome and cloud-hosted infrastructure.
 ```
-
-### Example
-
-```text
-Actual Output = 120 Sessions
-
-Target Output = 100 Sessions
-
-Productivity = 120%
-```
-
----
-
-## Productivity Metrics
-
-Track:
-
-- Tasks Completed
-- Sessions Completed
-- Collection Hours
-- Throughput
-- Daily Production
-- Weekly Performance
-- Monthly Trends
-
----
-
-# ✅ Quality Tracking
-
-## Quality Score Formula
-
-```text
-Quality Score (%) =
-(Approved Submissions ÷ Total Reviewed Submissions) × 100
-```
-
-### Example
-
-```text
-Approved = 9,850
-
-Reviewed = 10,000
-
-Quality Score = 98.5%
-```
-
----
-
-## Quality Categories
-
-### 🟢 Pass
-
-- Meets collection standards
-- Complete metadata
-- No validation issues
-
-### 🟡 Minor Defect
-
-- Metadata corrections required
-- Documentation issue
-- Label inconsistency
-
-### 🔴 Major Defect
-
-- Missing data
-- Corrupt files
-- Validation failure
-- Collection process violation
-
----
-
-# 📈 Dashboard Modules
-
-## Collector Dashboard
-
-Designed for Data Collectors.
-
-Features:
-
-- Daily Performance
-- Productivity Achievement
-- Submission History
-- Quality Score
-- Weekly Trends
-
----
-
-## Quality Analyst Dashboard
-
-Designed for Quality Teams.
-
-Features:
-
-- Audit Queue
-- Defect Tracking
-- Rework Reports
-- Quality Trends
-- Compliance Monitoring
-
----
-
-## Project Lead Dashboard
-
-Designed for Team Leads and Managers.
-
-Features:
-
-- KPI Summary
-- Team Performance
-- Utilization Monitoring
-- Productivity Rankings
-- Capacity Planning
-
----
-
-## Executive Dashboard
-
-Provides a high-level organizational view.
-
-Features:
-
-- Program Health
-- Productivity Trends
-- Quality Trends
-- Resource Allocation
-- Strategic KPIs
-
----
-
-# 📑 Reporting
-
-## Daily Operations Report
-
-Includes:
-
-- Production Summary
-- Productivity Achievement
-- Open Issues
-- Quality Status
-- Team Activity
-
----
-
-## Weekly Performance Report
-
-Includes:
-
-- KPI Achievement
-- Productivity Trends
-- Quality Trends
-- Team Comparison
-- Action Items
-
----
-
-## Monthly Executive Report
-
-Includes:
-
-- Program Health
-- Workforce Utilization
-- Quality Summary
-- Productivity Summary
-- Strategic Recommendations
-
----
-
-# 🔧 Troubleshooting
-
-## Dashboard Not Loading
-
-### Symptoms
-
-```text
-Blank Screen
-Endless Loading
-```
-
-### Resolution
-
-Verify backend service:
-
-```bash
-curl http://localhost:8000/health
-```
-
-Check browser console logs.
-
----
-
-## Database Connection Failure
-
-### Symptoms
-
-```text
-Connection Refused
-```
-
-### Resolution
-
-Verify PostgreSQL is running:
-
-```bash
-sudo systemctl status postgresql
-```
-
-Confirm database credentials in `.env`.
-
----
-
-## Productivity Metrics Not Updating
-
-### Causes
-
-- Scheduler stopped
-- Collection ingestion failure
-- Missing submissions
-
-### Resolution
-
-Verify scheduler status:
-
-```bash
-systemctl status tracker-scheduler
-```
-
-Inspect application logs.
-
----
-
-## Quality Reports Missing
-
-### Causes
-
-- Audit ingestion failure
-- Validation job failure
-
-### Resolution
-
-Review validation logs:
-
-```bash
-logs/quality-validation.log
-```
-
----
-
-## Slow Dashboard Performance
-
-### Recommended Actions
-
-- Archive historical records
-- Add database indexing
-- Optimize backend queries
-- Scale infrastructure resources
-
----
-
-# ✅ Best Practices
-
-## For Data Collectors
-
-- Submit completed work promptly
-- Validate metadata before submission
-- Follow collection procedures
-- Review uploads before finalizing
-
----
-
-## For Quality Analysts
-
-- Perform audits consistently
-- Monitor recurring defects
-- Track trend reports
-- Escalate quality concerns early
-
----
-
-## For Project Leads
-
-- Review KPIs daily
-- Balance team workloads
-- Address productivity gaps
-- Recognize top performers
-
----
-
-# 🛣️ Roadmap
-
-- [ ] AI Productivity Forecasting
-- [ ] Automated Quality Prediction
-- [ ] Microsoft Teams Integration
-- [ ] Power BI Embedded Analytics
-- [ ] Mobile Dashboard
-- [ ] Real-Time KPI Scorecards
-- [ ] Workforce Benchmarking
-- [ ] NVIDIA UMI Workflow Integration
-- [ ] AI Coaching Recommendations
-- [ ] Executive Analytics Portal
-
----
-
-# 🤝 Contributing
-
-Contributions are welcome.
-
-```bash
-git checkout -b feature/new-feature
-
-git commit -m "Add new feature"
-
-git push origin feature/new-feature
-```
-
-Create a Pull Request describing:
-
-- Purpose of change
-- Business impact
-- Screenshots (if applicable)
-- Testing performed
-
----
-
-# 📄 License
-
-This project is licensed under the **MIT License**.
-
-See the `LICENSE` file for more details.
-
----
-
-# 👨‍💻 Author
-
-### Louise
-**Robotics Data Collection & Quality Operations**
-
-Focused on robotics data quality, productivity improvement, operational excellence, continuous improvement, and future project leadership in AI and autonomous systems programs.
-
----
-
-## ⭐ Vision
-
-> **Measure Productivity. Improve Quality. Accelerate Robotics AI Development.**
-
-Built to help robotics data collection teams deliver high-quality datasets, improve operational efficiency, and support the next generation of intelligent autonomous systems.
